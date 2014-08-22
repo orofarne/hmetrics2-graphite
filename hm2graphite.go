@@ -7,7 +7,7 @@ import (
 )
 
 func Exporter(host string, port int) (func(map[string]float64), error) {
-	gr, err = graphite.NewGraphite(host, port)
+	gr, err := graphite.NewGraphite(host, port)
 	if err != nil {
 		return nil, err
 	}
