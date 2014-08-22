@@ -1,0 +1,2 @@
+gom 'github.com/orofarne/hmetrics2'
+gom 'github.com/marpaia/graphite-golang'
