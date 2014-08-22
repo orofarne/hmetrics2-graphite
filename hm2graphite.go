@@ -18,9 +18,8 @@ func Exporter(host string, port int) (func(map[string]float64), error) {
 	return func(newData map[string]float64) {
 		for k, v := range newData {
 			if !math.IsNaN(v) && !math.IsInf(v, 0) {
-				val, _ := fmt.Sprintf("%v", v)
-				gr.SimpleSend(k, val)
+				gr.SimpleSend(k, fmt.Sprintf("%v", v))
 			}
 		}
-	}
+	}, nil
 }
